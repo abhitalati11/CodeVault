@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CodeVault</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>CodeVault</h1>
+    <input type="text" placeholder="Search snippets..." id="searchBar">
+    <button id="addSnippetBtn">Add Snippet</button>
+  </header>
+  <main>
+    <div class="note"><p id="impnote">** Note - Please reload page one time after saving any snippet **</p>
+    </div>
+    <div class="snippet-grid" id="snippet-grid">
+      <!-- Snippet cards will go here -->
+      <div class="snippet-card" id="cardS">
+        <h3>Capitalize String</h3>
+        <p>Language: JS</p>
+        <p>Tags: string, text</p>
+      </div>
+      <!-- Repeat cards dynamically -->
+    </div>
+  </main>
+
+  <script src="js/testing.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

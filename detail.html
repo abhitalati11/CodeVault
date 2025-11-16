@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Snippet Detail</title>
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/detail.css">
+</head>
+<body>
+  <div class="snippet-detail">
+    <h2>Capitalize String</h2>
+    <p><strong>Language:</strong> JS</p>
+    <p><strong>Tags:</strong> string, text</p>
+    <p id="toCopy"><pre>
+function capitalize(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+    </pre></p>
+    <button id="copyBtn">Copy Code</button>
+    <button id="backBtn">Back</button>
+  </div>
+
+  <script src="js/details.js"></script>
+</body>
+</html>

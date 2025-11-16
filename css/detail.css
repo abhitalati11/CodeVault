@@ -1,0 +1,25 @@
+.snippet-detail {
+    max-width: 700px;
+    margin: 50px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.snippet-detail pre {
+    background: #f5f5f5;
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+.snippet-detail button {
+    margin-top: 15px;
+    padding: 8px 15px;
+    background: #1a73e8;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
