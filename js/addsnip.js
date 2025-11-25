@@ -6,24 +6,26 @@ let code = document.getElementById("code");
 let tags = document.getElementById("tags");
 const save = document.getElementById("saveBtn");
 const cancle= document.getElementById("cancelBtn");
+localStorage.setItem("Data" , "there it is ")
 
-let String = [tittle.value , lang.value , code , tags];
-let codeString = JSON.stringify(String);
-
+function checkid(){
+    let Lid = realAdd.length;
+    let index = Lid - 1;
+    console.log(`index is ${index}`);
+    console.log(`Lid is ${Lid}`);
+}
 
 save.onclick = ()=>{
-    localStorage.setItem("tittle" , tittle.value);
-    localStorage.setItem("Langauge" , lang.value);
-    localStorage.setItem("Code" , code.value);
-    localStorage.setItem("Tags" , tags.value);
-    localStorage.setItem("Data" , codeString);
-    window.close();
-
-    setTimeout(() => {
-        window.reload();
-    }, 6000);
+    checkdata();
+    // checkid();
+    // console.log(tittle.value);
 }
 
 cancle.onclick = () => {
     window.close();
+}
+
+function checkdata() {
+    const realdata = JSON.parse(localStorage.getItem("Data"));
+    console.log(realdata);
 }
