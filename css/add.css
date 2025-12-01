@@ -34,7 +34,7 @@ form textarea {
     border-radius: 5px;
 }
 
-.form-buttons button[type="submit"] {
+.form-buttons button[type="button"] {
     background: #1a73e8;
     color: white;
 }
