@@ -8,7 +8,7 @@ const save = document.getElementById("saveBtn");
 const cancle= document.getElementById("cancelBtn");
 
 save.onclick = ()=>{
-    console.log(tittle.value , lang.value , tags.value);
+    // console.log(tittle.value , lang.value , tags.value);
     checkdata();
 }
 
@@ -29,7 +29,7 @@ function checkdata(){
         console.log(lastindex);
         console.log(realdata[lastindex] );
 
-        let newdata = {c_id : length + 1 , tittle : tittle.value , code : code.value , tags : tags.value, lang : lang.value}
+        const newdata = {c_id : length + 1 , tittle : tittle.value , code : code.value , tags : tags.value, lang : lang.value}
 
         realdata.push(newdata);
         console.log(newdata);
@@ -38,8 +38,22 @@ function checkdata(){
         const nextdata = JSON.stringify(realdata);
         localStorage.clear();
         localStorage.setItem("Data" , nextdata);
+
+        // for(let i = 0 ; i <= length ; i++){
+        //     console.log(realdata[i]);
+        // }
     }
     else{
-        console.log("no data")
+        console.log("no data so we need to add DATA to localstorage");
+
+        const Data = [];
+        const fstdata = {c_id : 1 , tittle : tittle.value , code : code.value , tags : tags.value, lang : lang.value};
+
+        Data.push(fstdata);
+        console.log(Data);
+        console.log(fstdata);
+
+        const localdata = JSON.stringify(Data);
+        localStorage.setItem("Data" , localdata);
     }
 }
