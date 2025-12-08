@@ -1,3 +1,5 @@
+console.log("~ Created by YD in 2025")
+
 // taking all inputs as variable
 
 let tittle = document.getElementById("tittle");
