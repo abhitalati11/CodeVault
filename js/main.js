@@ -23,7 +23,7 @@ if(localStorage.getItem("Data")){
         // adding divs dynamically 
         let newdiv = document.createElement(`div`);
         newdiv.className = "snippet-card";
-        newdiv.id = "cards";
+        newdiv.id = `card${i+1}`;
 
         sinppetgrid.appendChild(newdiv);
 
@@ -60,7 +60,40 @@ let snippetcard = document.querySelectorAll(".snippet-card");
 // console.log(snippetcard)
 snippetcard.forEach(snippetcard => {
     snippetcard.addEventListener(`click` , () => {
-        console.log(realdata.length)
+        let card_id = snippetcard.id;
+        let index = Number(card_id.charAt(card_id.length - 1));
+
+        console.log(card_id);
+        console.log(index);
+        getdata(index);
     })
 })
 
+function getdata(index){
+    let realid = index - 1 ;
+    const rawdata = localStorage.getItem("Data");
+    const realdata = JSON.parse(rawdata);
+    console.log(realdata[realid]);
+    const code = realdata[realid].code;
+    const tittle = realdata[realid].tittle;
+    const tags = realdata[realid].tags;
+    const lang = realdata[realid].lang;
+
+
+    function addDatatomodal(){
+        console.log(`${tittle}`);
+        console.log(`${tags}`);
+        console.log(`${lang}`);
+        console.log(`${code}`);
+    }
+    addDatatomodal();
+    showmodal();
+}
+
+// making dat modal visible or invisible
+
+function showmodal(){
+    const modalcont = document.querySelector(".modalcontainer");
+    modalcont.style.removeProperty('display');
+    modalcont.style.display = 'flex';
+}
